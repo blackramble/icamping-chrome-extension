@@ -59,6 +59,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             return { id, name, imgUrl, state, town, height, isFull };
         });
         // console.log('filterData', filterData);
+        if (filterData.length === 0) return;
 
         const modal = document.createElement('div');
         // modal.innerHTML = '<p>This is a modal!</p>';
