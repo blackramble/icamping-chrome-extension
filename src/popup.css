@@ -8,9 +8,9 @@
 }
 /* normalize css ends here */
 
-
 html {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif;
     color: #222;
 }
 
@@ -28,7 +28,9 @@ body {
     text-align: center;
     padding: 20px;
 }
-
+.m-1 {
+    margin: 1rem;
+}
 .title {
     font-size: 18px;
     font-weight: 600;
@@ -42,7 +44,7 @@ body {
 code {
     font-size: 12px;
     font-family: inherit;
-    background-color: rgba(254, 237, 185, .3);
+    background-color: rgba(254, 237, 185, 0.3);
     padding: 2px 4px;
     border-radius: 2px;
 }
@@ -72,7 +74,7 @@ code {
     cursor: pointer;
     border-radius: 4px;
     text-decoration: none;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
     user-select: none;
 }
 
@@ -87,6 +89,6 @@ code {
 .divider {
     margin: 30px auto 25px;
     width: 50px;
-    border: .5px dashed #000;
-    opacity: .1;
+    border: 0.5px dashed #000;
+    opacity: 0.1;
 }
