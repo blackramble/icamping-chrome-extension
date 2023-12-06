@@ -37,8 +37,13 @@ body {
     margin-bottom: 10px;
 }
 
+.logo {
+    width: 64px;
+    margin-bottom: 1rem;
+}
+
 .subtitle {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 code {

@@ -1,33 +1,8 @@
 'use strict';
 
-// Content script file will run in the context of web page.
-// With content script you can manipulate the web pages using
-// Document Object Model (DOM).
-// You can also pass information to the parent extension.
-
-// We execute this script by making an entry in manifest.json file
-// under `content_scripts` property
-
-// For more information on Content Scripts,
-// See https://developer.chrome.com/extensions/content_scripts
-
-// Log `title` of current active web page
 const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
 console.log(
     `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
-);
-
-// Communicate with background file by sending a message
-chrome.runtime.sendMessage(
-    {
-        type: 'GREETINGS',
-        payload: {
-            message: 'Hello, my name is Con. I am from ContentScript.',
-        },
-    },
-    (response) => {
-        console.log(response.message);
-    }
 );
 
 // Listen for message
@@ -38,11 +13,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     if (request.type === 'CHANGE') {
         console.log(`Change Event On`);
+        if (document.getElementsByClassName('dialog-extension')[0]) {
+            return;
+        }
         const bigheroArray = Array.from(
             document.getElementsByClassName('smallhero')
         );
         const filterData = bigheroArray.map((item) => {
-            // console.log(item);
             const numRegex = /\d+/g;
             const imgEl = item.querySelectorAll('img')[0];
             const nameEl = item.querySelectorAll('.dark-grey-text strong')[0];
@@ -58,16 +35,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             const name = nameEl.innerText;
             return { id, name, imgUrl, state, town, height, isFull };
         });
-        // console.log('filterData', filterData);
         if (filterData.length === 0) return;
 
         const modal = document.createElement('div');
-        // modal.innerHTML = '<p>This is a modal!</p>';
+        modal.classList.add('dialog-extension');
+        const floatBtn = document.createElement('button');
+        floatBtn.innerHTML = '<p style="margin:auto;">開關</p>';
+        floatBtn.style.cssText =
+            'background-color: #FF7400;position: fixed;bottom: 3rem;right: 3rem;border-radius: 50%;width: 100px;height: 100px;z-index: 99999999;';
         modal.style.cssText =
             'z-index:9999999; width: 100%; height:100%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);display:flex; flex-direction: row; flex-wrap: wrap; overflow:scroll; gap:20px;';
 
-        // 將彈窗添加到 body 中
         document.body.appendChild(modal);
+        document.body.appendChild(floatBtn);
+
+        const isClose = false;
+        floatBtn.addEventListener('click', () => {
+            modal.style.display === 'flex'
+                ? (modal.style.display = 'none')
+                : (modal.style.display = 'flex');
+        });
 
         filterData.forEach((item) => {
             if (!item.isFull) {
