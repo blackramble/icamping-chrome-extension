@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         const floatBtn = document.createElement('button');
         floatBtn.innerHTML = '<p style="margin:auto;">開關</p>';
         floatBtn.style.cssText =
-            'background-color: #FF7400;position: fixed;bottom: 3rem;right: 3rem;border-radius: 50%;width: 100px;height: 100px;z-index: 99999999;';
+            'background-color: #134B43;color:white;position: fixed;bottom: 3rem;right: 3rem;border-radius: 50%;width: 100px;height: 100px;z-index: 99999999;';
         modal.style.cssText =
             'z-index:9999999; width: 100%; height:100%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);display:flex; flex-direction: row; flex-wrap: wrap; overflow:scroll; gap:20px;';
 
