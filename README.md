@@ -9,7 +9,8 @@ My Chrome Extension
 
 ## Install
 1. 下載檔案
-   [https://github.com/blackramble/icamping-chrome-extension/archive/refs/heads/main.zip](https://github.com/blackramble/icamping-chrome-extension/archive/refs/heads/main.zip)
+   [https://github.com/blackramble/icamping-chrome-extension/archive/refs/heads/master.zip](https://github.com/blackramble/icamping-chrome-extension/archive/refs/heads/master.zip
+)
 2. 在chrome瀏覽器分頁網址處貼上chrome://extensions/，並前往。
    ![image](https://github.com/blackramble/icamping-chrome-extension/assets/66875038/ea83b909-71af-46dd-ba40-22f7f3d8227f)
 
