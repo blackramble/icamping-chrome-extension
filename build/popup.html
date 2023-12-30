@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Chrome Extension</title>
+        <link
+            rel="stylesheet"
+            href="popup.css"
+        />
+    </head>
+    <body>
+        <div class="app">
+            <div>
+                <img
+                    class="logo"
+                    src="/icons/bonfire.png"
+                />
+            </div>
+            <div class="title">非官方插件</div>
+            <div class="subtitle">
+                <p>在快速訂位點下送出按鈕，並取得資料後</p>
+                <p>即可按下change按鈕，來提升您的瀏覽體驗</p>
+                <p>已幫忙過濾客滿房間！</p>
+            </div>
+            <div class="button-container">
+                <button
+                    id="changeElement"
+                    class="button m-1"
+                >
+                    Change It
+                </button>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+
+        <!--
+    This HTML file opens when you click on icon from the toolbar.
+
+    To begin the development, run `npm run watch`.
+    To create a production bundle, use `npm run build`.
+  -->
+    </body>
+</html>
