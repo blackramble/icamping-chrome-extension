@@ -31,7 +31,7 @@
    ![image](https://github.com/blackramble/icamping-chrome-extension/assets/66875038/98b701e7-24f5-40c7-8b21-15c0a5922b0a)
 ---
 使用步驟
-   1. 第一步 - 進入快速訂位，選擇您的條件，並點擊送出
+   1. 第一步 - 進入快速訂位，選擇您的條件，並點擊送出 （[https://m.icamping.app/camp/search](https://m.icamping.app/camp/search)）
    ![image](https://github.com/blackramble/icamping-chrome-extension/assets/66875038/aca15924-7940-4293-844d-161a7d6ae947)
 
    2. 第二步 - 等待完漫長的獲取時間，在畫面跑出來後，就可以開始使用我們的插件！
