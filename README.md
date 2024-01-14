@@ -1,6 +1,6 @@
 # <img src="public/icons/icon_48.png" width="45" align="left"> Icamping Chrome Extension
 
-為改善找露營地每次都要等待api一次拿200多筆資料漫長等待時間又不給開新分頁的問題！！！
+為改善找露營地每次都要等待api一次拿200多筆資料漫長等待時間又不給開新分頁的問題！！
 
 另外分享使用小技巧：滑鼠滾輪按下去可以另開分頁～請多加利用！
 
